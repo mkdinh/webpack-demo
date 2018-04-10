@@ -1,0 +1,41 @@
+const webpack = require('webpack');
+const path = require('path');
+
+module.exports = {
+
+  entry: {
+    app: "./src/main.js"
+  },
+
+  output: {
+    // bundle name in file system
+    filename: 'bundle.js',
+    // accessing bundle in server
+    publicPath: '/dist',
+    // where to deposit bundle on dist
+    path: path.resolve(__dirname, 'dist/static/js')
+  },
+
+  target: 'node',
+
+  module: {
+    rules: [
+      {
+        test: /\.js$/,
+        loaders: ['babel-loader'],
+        exclude: /node_modules/
+      },
+      {
+        test: /.css$/,
+        loaders: [
+          'styles-loader',
+          'css-loader'
+        ]
+      }
+    ]
+  },
+
+  plugins: [
+    new webpack.HotModuleReplacementPlugin()
+  ]
+}
