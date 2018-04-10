@@ -1,6 +1,5 @@
 import registerSW from './worker.js';
 import '../public/assets/css/main.css';
-import '../public/index.html';
 import generateNumber from './generateNumbers.js';
 import { bubbleSort, bubbleSortLive } from './bubbleSort.js';
 registerSW();
