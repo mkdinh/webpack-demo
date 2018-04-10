@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack-dev-server --config webpack.dev.js"
+    "dev": "webpack-dev-server --config webpack.dev.js",
+    "build": "webpack --config webpack.prod.js"
   },
   "author": "",
   "license": "ISC",
@@ -38,5 +39,7 @@
     "url": "https://github.com/mkdinh/webpack-demo/issues"
   },
   "homepage": "https://github.com/mkdinh/webpack-demo#readme",
-  "dependencies": {}
+  "dependencies": {
+    "express": "^4.16.3"
+  }
 }

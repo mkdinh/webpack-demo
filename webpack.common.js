@@ -1,20 +1,10 @@
 const webpack = require('webpack');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
 
 module.exports = {
 
   entry: {
     app: "./src/main.js"
-  },
-
-  output: {
-    // bundle name in file system
-    filename: 'bundle.js',
-    // accessing bundle in server
-    publicPath: '/dist',
-    // where to deposit bundle on dist
-    path: path.resolve(__dirname, 'dist/static/js')
   },
 
   target: 'web',
@@ -38,12 +28,5 @@ module.exports = {
         ]
       }
     ]
-  },
-
-  plugins: [
-    new webpack.HotModuleReplacementPlugin(),
-    new HtmlWebpackPlugin({
-      template: './public/index.html'
-    })
-  ]
+  }
 }

@@ -2,6 +2,7 @@ const webpack = require('webpack');
 const merge = require('webpack-merge');
 const common = require('./webpack.common.js');
 const path = require('path');
+
 module.exports = merge(common, {
 
   devServer: {
@@ -12,8 +13,20 @@ module.exports = merge(common, {
     hot: true
   },
 
+  output: {
+    // bundle name in file system
+    filename: 'bundle.js',
+    // accessing bundle in server
+    publicPath: '/dist',
+    // where to deposit bundle on dist
+    path: path.resolve(__dirname, 'dist/static/js')
+  },
+
   devtool: 'inline-cheap-module-source map',
 
+  mode: 'development',
 
-  mode: 'development'
+  plugins: [
+    new webpack.HotModuleReplacementPlugin()
+  ]
 });
