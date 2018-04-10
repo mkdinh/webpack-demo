@@ -1,5 +1,6 @@
 import registerSW from './worker.js';
 import '../public/assets/css/main.css';
+import '../public/index.html';
 import generateNumber from './generateNumbers.js';
 import { bubbleSort, bubbleSortLive } from './bubbleSort.js';
 registerSW();
@@ -7,7 +8,8 @@ registerSW();
 let randNum;
 
 function displayRandNum() {
-  randNum = generateNumber(1500);
+  let len = window.document.getElementById('len-input').value;
+  randNum = generateNumber(len);
   let container = window.document.getElementById('numbers');
   container.innerHTML = randNum;
 }

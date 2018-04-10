@@ -1,12 +1,16 @@
-// create server
+// create dependencies
 const express = require('express');
+const path = require('path');
+// create server
 const app = express();
 // specify port
 const PORT = 3000;
 
+app.use(express.static(path.join(__dirname, './dist')));
+
 // serve file
-app('*', function (req, res) {
-  res.send('./dist/index.html');
+app.get('/', function (req, res) {
+  res.sendFile(path.join(__dirname, './dist/index.html'));
 })
 
 app.listen(PORT, function () {

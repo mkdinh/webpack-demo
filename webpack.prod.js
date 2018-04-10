@@ -6,8 +6,6 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = merge(common, {
 
-  mode: 'production',
-
   output: {
     // bundle name in file system
     filename: 'bundle.js',
@@ -17,9 +15,12 @@ module.exports = merge(common, {
 
   plugins: [
     new HtmlWebpackPlugin({
-      template: './public/index.html',
+      template: './public/index.prod.html',
       filename: '../../index.html'
     })
-  ]
+  ],
+
+  mode: 'production'
+
 
 })
