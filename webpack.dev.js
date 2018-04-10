@@ -8,7 +8,8 @@ module.exports = merge(common, {
     contentBase: path.resolve(__dirname, 'public'),
     // publicPath: 'http://localhost:3000/dist',
     // filename: 'bundle.js',//--------------------------------------------------------
-    port: 3000
+    port: 3000,
+    hot: true
   },
 
   devtool: 'inline-cheap-module-source map',

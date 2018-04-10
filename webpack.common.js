@@ -16,10 +16,14 @@ module.exports = {
     path: path.resolve(__dirname, 'dist/static/js')
   },
 
-  target: 'node',
+  target: 'web',
 
   module: {
     rules: [
+      {
+        test: /\.html$/,
+        loader: ['html-loader']
+      },
       {
         test: /\.js$/,
         loaders: ['babel-loader'],
@@ -28,7 +32,7 @@ module.exports = {
       {
         test: /.css$/,
         loaders: [
-          'styles-loader',
+          'style-loader',
           'css-loader'
         ]
       }
