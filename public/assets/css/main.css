@@ -36,8 +36,9 @@ body {
 }
 
 #len-input {
-  font: bold 1rem Verdana;
+  font: bold 0.9rem Verdana;
   border: none;
+  width: 15%;
   /* background: rgba(0, 0, 0, 0.25); */
   margin: 0 1rem;
   color: #000000;
