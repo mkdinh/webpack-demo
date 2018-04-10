@@ -24,14 +24,14 @@ function handleSort(liveSort) {
           container.innerHTML = sorted;
           let duration = (Date.now() - t) / 1000;
           duration = duration.toFixed(2);
-          timeContainer.innerHTML = 'It took: ' + duration + 's to sort ' + randNum.length + ' elements without DOM manipulation';
+          timeContainer.innerHTML = 'It took: ' + duration + 's to sort ' + randNum.length + ' elements with DOM manipulation';
         });
     } else {
       let sorted = bubbleSort(randNum);
       container.innerHTML = sorted;
       let duration = (Date.now() - t) / 1000;
       duration = duration.toFixed(2);
-      timeContainer.innerHTML = 'It took: ' + duration + 's to sort ' + randNum.length + ' elements with DOM manipulation';
+      timeContainer.innerHTML = 'It took: ' + duration + 's to sort ' + randNum.length + ' elements without DOM manipulation';
     }
   }
 }
