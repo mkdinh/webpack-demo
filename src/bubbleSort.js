@@ -51,7 +51,7 @@ export function bubbleSortLive(array, len) {
       } else {
         resolve(array);
       }
-    }, 0);
+    }, 0.11);
   })
 }
 

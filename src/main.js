@@ -6,6 +6,8 @@ registerSW();
 
 let randNum;
 
+console.log('hello, a')
+
 function displayRandNum() {
   let len = window.document.getElementById('len-input').value;
   randNum = generateNumber(len);
