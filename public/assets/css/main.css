@@ -6,12 +6,16 @@ body {
 }
 
 .title-bar {
-  background: #252424;;
-  padding: 0.5rem 1rem;
-  height: 5%
+  background: #252424;
+  padding: 0;
+  height: 7vh;
+  display: flex;
+  align-items: center;
 }
 
 .title {
+  flex: 1;
+  margin: 0 1rem;
   font: bold 1.5rem Verdana;
   color: #FFFFFF;
   width: 30%;
@@ -67,4 +71,14 @@ button {
 
 button:hover {
   background: #2c3758
+}
+
+.counter-button {
+  height: 100%;
+}
+
+#counter {
+  margin: 1rem;
+  color: #FFFFFF;
+  font: bold 1.5rem Verdana;
 }

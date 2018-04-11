@@ -2,12 +2,18 @@
 
 <head>
   <title>
-    webpack demo
+    Live Sort
   </title>
+</head>
+
+<body>
   <div class='title-bar'>
     <div class='title'>
       Live! From Bubble Sort!
     </div>
+    <span id='counter'>0</span>
+    <button class='counter-button' id='start-counter-button'>Start Counter</button>
+    <button class='counter-button' id='stop-counter-button'>Stop Counter</button>
   </div>
   <div id='numbers'></div>
   <div class='buttons-wrapper'>
@@ -17,10 +23,7 @@
     <button id='sort-button'>Sort</button>
     <button id='sort-live-button'>Sort Live</button>
   </div>
-</head>
 
-<body>
-  <script src='/static/js/bundle.js'></script>
-<script type="text/javascript" src="static/js/bundle.js"></script></body>
+<script type="text/javascript" src="/app.bundle.js"></script></body>
 
 </html>

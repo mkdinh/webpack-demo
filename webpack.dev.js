@@ -5,24 +5,18 @@ const path = require('path');
 
 module.exports = merge(common, {
 
-  output: {
-    // bundle name in file system
-    filename: 'bundle.js',
-    // accessing bundle in server
-    publicPath: '/dist/'
-  },
-
   devServer: {
     contentBase: path.resolve(__dirname, './public/'),
-    port: 3000
+    port: 3000,
+    hot: true,
   },
-
 
   devtool: 'inline-cheap-module-source map',
 
   mode: 'development',
 
   plugins: [
-    // new webpack.HotModuleReplacementPlugin()
+    new webpack.NamedModulesPlugin(),
+    new webpack.HotModuleReplacementPlugin()
   ]
 });
